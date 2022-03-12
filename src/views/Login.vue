@@ -1,10 +1,15 @@
 <template>
-<h1>Login View</h1>
+<AuthLayout>
+  <AuthLogin />
+</AuthLayout>
 </template>
 
 <script>
+import AuthLayout from "@/components/auth/AuthLayout";
+import AuthLogin from "@/components/auth/AuthLogin";
 export default {
-  name: "Login"
+  name: "Login",
+  components: {AuthLogin, AuthLayout}
 }
 </script>
 
