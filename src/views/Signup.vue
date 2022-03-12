@@ -1,13 +1,17 @@
 <template>
-  <h1>Signup View</h1>
+  <AuthLayout>
+    <AuthSignup />
+  </AuthLayout>
 </template>
 
 <script>
+import AuthLayout from "../components/auth/AuthLayout";
+import AuthSignup from "@/components/auth/AuthSignup";
 export default {
-  name: "Signup"
+  name: "Signup",
+  components: {
+    AuthSignup,
+    AuthLayout
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
