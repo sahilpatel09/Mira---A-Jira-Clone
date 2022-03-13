@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white mx-1.5 px-2 py-4" drragable="true">
-    <p class="text-sm">Each issue can be assigned the priority to be fiexd and to be go on the next column.</p>
+    <p class="text-sm">{{ title }}</p>
     <div class="flex flex-row justify-between items-center mt-3">
       <div class="flex flex-row gap-2">
         <input type="checkbox" checked/>
@@ -14,7 +14,13 @@
 
 <script>
 export default {
-  name: "IssueCard"
+  name: "IssueCard",
+  props: {
+    title: String
+  },
+  mounted() {
+    console.log(this.title)
+  }
 }
 </script>
 
