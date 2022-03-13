@@ -7,34 +7,28 @@
         <img src="../assets/plus.png" alt="" class="w-12 ml-2">
       </div>
     </aside>
-    <div class="z-49 w-64 fixed absolute top-0 ml-20 bg-gray-200 h-screen px-5 pt-6">
+    <div class="z-49 w-64 fixed absolute top-0 ml-20 bg-gray-100 h-screen px-5 pt-6">
 
       <div class="flex flex-row items-center gap-2">
-        <DashIcon />
+        <DashIcon/>
         <div>
           <h2 class="font-semibold text-lg">Mira 2.0</h2>
           <p class="text-xs">Software Project</p>
         </div>
       </div>
 
-<!--      <div class="">-->
-<!--        <buton>-->
-<!--          <i></i>-->
-<!--        </buton>-->
-<!--      </div>-->
+      <DashMenu/>
+
 
     </div>
 
     <div class=" top-0 right-0 ml-84 bg-white ml-80 px-5 pt-6 px-14">
-      <BoradHeader />
+      <BoradHeader/>
       <div class="mt-4 flex flex-row gap-4">
-          <FeatureMeta />
+        <FeatureMeta/>
       </div>
-      <div class="flex flex-row items-start gap-5 mt-6 justify-between">
-        <IssueBox />
-        <IssueBox />
-        <IssueBox />
-        <IssueBox />
+      <div class="flex flex-row items-start gap-2 mt-6 justify-between">
+        <IssueBoxContainer/>
       </div>
     </div>
 
@@ -45,8 +39,22 @@
 import DashIcon from "@/components/dashboard/DashIcon";
 import BoradHeader from "@/components/dashboard/BoradHeader";
 import FeatureMeta from "@/components/dashboard/FeatureMeta";
-import IssueBox from "@/components/dashboard/IssueBox";
+import DashMenu from "@/components/dashboard/DashMenu";
+import IssueBoxContainer from "@/components/dashboard/IssueBoxContainer";
+
 export default {
-  components: {BoradHeader, DashIcon, FeatureMeta, IssueBox}
+  components: {IssueBoxContainer, DashMenu, BoradHeader, DashIcon, FeatureMeta},
+  data: () => {
+    return {
+      active: true,
+    };
+  },
 }
 </script>
+<style>
+
+.roboto {
+  font-family: 'Fredoka', sans-serif;
+}
+
+</style>
