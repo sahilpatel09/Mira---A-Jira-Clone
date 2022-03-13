@@ -26,9 +26,15 @@
     </div>
 
     <div class=" top-0 right-0 ml-84 bg-white ml-80 px-5 pt-6 px-14">
-      <h1 class="text-lg text-gray-500 font-semibold antialiased">Projects / Mira 2.0 / Kanban</h1>
-      <div>
-
+      <BoradHeader />
+      <div class="mt-4 flex flex-row gap-4">
+          <FeatureMeta />
+      </div>
+      <div class="flex flex-row items-start gap-5 mt-6 justify-between">
+        <IssueBox />
+        <IssueBox />
+        <IssueBox />
+        <IssueBox />
       </div>
     </div>
 
@@ -37,7 +43,10 @@
 </template>
 <script>
 import DashIcon from "@/components/dashboard/DashIcon";
+import BoradHeader from "@/components/dashboard/BoradHeader";
+import FeatureMeta from "@/components/dashboard/FeatureMeta";
+import IssueBox from "@/components/dashboard/IssueBox";
 export default {
-  components: {DashIcon}
+  components: {BoradHeader, DashIcon, FeatureMeta, IssueBox}
 }
 </script>
