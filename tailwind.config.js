@@ -7,12 +7,13 @@ module.exports = {
     extend: {
       colors: {
         'logo': '#2684FF',
-        'logofill':'#0052CC',
+        'logofill': '#0052CC',
         'asidecolor': 'rgb(7,71,166)',
       },
       fontFamily: {
-        'display': ['-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Fira Sans","Droid Sans","Helvetica Neue",sans-serif',],
-      }
+        'display': ['-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Fira Sans","Droid Sans","Helvetica Neue",sans-serif'],
+        'circle': ['CircularStdMedium'],
+      },
     },
   },
   plugins: [],
