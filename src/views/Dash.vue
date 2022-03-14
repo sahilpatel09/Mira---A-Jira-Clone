@@ -32,7 +32,7 @@
       </div>
     </div>
 
-
+<!--  <CreateIssue />-->
   </div>
 </template>
 <script>
@@ -41,9 +41,9 @@ import BoradHeader from "@/components/dashboard/BoradHeader";
 import FeatureMeta from "@/components/dashboard/FeatureMeta";
 import DashMenu from "@/components/dashboard/DashMenu";
 import IssueBoxContainer from "@/components/dashboard/IssueBoxContainer";
-
+//import CreateIssue from "@/components/popups/CreateIssue";
 export default {
-  components: {IssueBoxContainer, DashMenu, BoradHeader, DashIcon, FeatureMeta},
+  components: { IssueBoxContainer, DashMenu, BoradHeader, DashIcon, FeatureMeta},
   data: () => {
     return {
       active: true,

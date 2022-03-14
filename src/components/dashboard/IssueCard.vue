@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white mx-1.5 px-2 py-4" drragable="true">
+  <div class="bg-white mx-1.5 px-2 py-4 my-1">
     <p class="text-sm">{{ title }}</p>
     <div class="flex flex-row justify-between items-center mt-3">
       <div class="flex flex-row gap-2">

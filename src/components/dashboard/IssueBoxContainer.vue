@@ -1,8 +1,8 @@
 <template>
-  <IssueBox title="Backlogs" :data="listOne"/>
-  <IssueBox title="Selected for development" :data="listTwo"/>
-  <IssueBox title="In Progress 2" :data="listThree"/>
-  <IssueBox title="Done 2" :data="listFour"/>
+  <IssueBox @drop="onDrop($event, 1)" @dragover.prevent @dragenter.prevent title="Backlogs" :data="listOne"/>
+  <IssueBox title="Selected for development" :data="listTwo" @drop="onDrop($event, 2)" @dragover.prevent @dragenter.prevent/>
+  <IssueBox title="In Progress 2" :data="listThree" @drop="onDrop($event, 3)" @dragover.prevent @dragenter.prevent/>
+  <IssueBox title="Done 2" :data="listFour" @drop="onDrop($event, 4)" @dragover.prevent @dragenter.prevent/>
 </template>
 
 <script>
@@ -19,23 +19,28 @@ export default {
       items: [
         {
           id: 0,
-          title: 'Item A',
+          title: 'Try to drag this block into another block and see the dragging functionality.',
           list: 1
         },
         {
           id: 1,
-          title: 'Item B',
+          title: 'Another Issue with boring ideas.',
           list: 2
         },
         {
           id: 2,
-          title: 'Item C',
+          title: 'I hate clients nowadays. Do you hate them too?',
           list: 3
         },
         {
           id: 3,
-          title: 'Item C',
+          title: 'I do nothing.',
           list: 4
+        },
+        {
+          id: 4,
+          title: 'Another Issue with second column.',
+          list: 2
         },
 
       ]
@@ -57,6 +62,14 @@ export default {
       return this.items.filter(item => item.list === 4)
     },
 
+  },
+  methods: {
+    onDrop(evt, list) {
+      console.log(evt.dataTransfer.getData('itemID'), list);
+      const itemID = evt.dataTransfer.getData('itemID')
+      const item = this.items.find(item => item.id == itemID)
+      item.list = list
+    }
   }
 }
 </script>
