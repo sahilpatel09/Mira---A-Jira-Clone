@@ -2,6 +2,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9f8f3d89-ad74-4cc6-beaf-364f678e0abb/deploy-status)](https://app.netlify.com/sites/jiramira/deploys)
 
+## Dashboard
+The dashboard has the functionality of drag & drop implemented in Vue.js. I will implement all other functionalities one by one as time allows.
+
+![](https://github.com/sahilpatel09/Mira---A-Jira-Clone/blob/main/public/screely-1654532762573.png?raw=true)
+
+## Login & Sign Up Design
+![](https://github.com/sahilpatel09/Mira---A-Jira-Clone/blob/main/public/screely-1654532856805.png?raw=true)
+
+![](https://github.com/sahilpatel09/Mira---A-Jira-Clone/blob/main/public/screely-1654532885374.png?raw=true)
 ## Project setup
 ```
 yarn install
